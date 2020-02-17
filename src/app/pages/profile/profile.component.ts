@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
     .subscribe();
   }
 
-  seleccionImagen(archivo: File){
+  seleccionImagen( archivo: File ){
 
     if(!archivo){
       this.imagenSubir = null;

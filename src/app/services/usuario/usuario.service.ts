@@ -7,11 +7,12 @@ import { map } from "rxjs/operators";
 // Remedio para error en sweetAlert
 import * as _swal from "sweetalert";
 import { SweetAlert } from "sweetalert/typings/core";
+const swal: SweetAlert = _swal as any;
+
 import { Router } from '@angular/router';
 
 //No es necesario index por error ciclico raro
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
-const swal: SweetAlert = _swal as any;
 
 @Injectable({
   providedIn: "root"

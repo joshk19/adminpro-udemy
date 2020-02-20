@@ -42,7 +42,7 @@
                                 <img [src]="medico.img | imagen: 'medico'" class="img-50">
                             </td>
                             <td>{{ medico.nombre }}</td>
-                            <!-- Error de objeto hospital.nombre no real -->
+                            <!-- Error falso de objeto hospital.nombre no real -->
                             <td>{{ medico.hospital.nombre }}</td>
                             <td>
                                 <button [routerLink]="['/medico', medico._id]" class="btn btn-primary">

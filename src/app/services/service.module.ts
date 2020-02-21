@@ -13,7 +13,8 @@ import {
   MedicoService,
   //Guards
   LoginGuardGuard,
-  AdminGuard
+  AdminGuard,
+  VerificaTokenGuard
 } from "./service.index";
 
 @NgModule({
@@ -31,7 +32,8 @@ import {
     MedicoService,
     //Guards
     LoginGuardGuard, 
-    AdminGuard
+    AdminGuard,
+    VerificaTokenGuard
   ]
 })
 export class ServiceModule {}

@@ -3,7 +3,7 @@ import { Usuario } from '../../models/usuario.model';
 import { UsuarioService } from '../../services/service.index';
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 
-declare var swal: any;
+// declare var swal: any;
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',

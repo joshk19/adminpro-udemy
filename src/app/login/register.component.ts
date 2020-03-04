@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 // //Remedio para error de SweetAlert
 // import * as _swal from 'sweetalert';
 // import { SweetAlert } from 'sweetalert/typings/core';
-// // const swal: SweetAlert = _swal as any;
+// const swal: SweetAlert = _swal as any;
 
 
 declare function init_plugins();

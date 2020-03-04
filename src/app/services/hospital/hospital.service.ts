@@ -5,11 +5,11 @@ import { map } from 'rxjs/operators';
 import { Hospital } from '../../models/hospital.model';
 
 // Remedio para error en sweetAlert
-import * as _swal from "sweetalert";
-import { SweetAlert } from "sweetalert/typings/core";
-import { Usuario } from '../../models/usuario.model';
-const swal: SweetAlert = _swal as any;
+// import * as _swal from "sweetalert";
+// import { SweetAlert } from "sweetalert/typings/core";
+// const swal: SweetAlert = _swal as any;
 
+import { Usuario } from '../../models/usuario.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -43,7 +43,7 @@ export class HospitalService {
     return this.http.post(url, {nombre})
     .pipe(
       map((resp: any) => {
-        swal('Hospital creado', resp.hospital.nombre, 'success');
+        // swal('Hospital creado', resp.hospital.nombre, 'success');
         return resp.hospital;
       })
     )
@@ -81,7 +81,7 @@ export class HospitalService {
     return this.http.put(url, hospital)
     .pipe(
       map( (resp: any) => {
-        swal('Hospital actualizado', hospital.nombre, 'success');
+        // swal('Hospital actualizado', hospital.nombre, 'success');
         return true;
       })
     )
@@ -94,7 +94,7 @@ export class HospitalService {
     return this.http.delete( url )
     .pipe(
       map( resp => {
-        swal('Hospital borrado', 'El hospital ha sido eliminado correctamente', 'success');
+        // swal('Hospital borrado', 'El hospital ha sido eliminado correctamente', 'success');
         return true;
       })
     )

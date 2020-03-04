@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Medico } from "../../models/medico.model";
 import { MedicoService } from "../../services/medico/medico.service";
 
-declare var swal: any;
+// declare var swal: any;
 
 @Component({
   selector: "app-medicos",
@@ -39,19 +39,19 @@ export class MedicosComponent implements OnInit {
   }
 
   borrarMedico(medico: Medico) {
-    swal({
-      title: "¿Estas seguro?",
-      text: "Estas a punto de borrar a " + medico.nombre,
-      icon: "warning",
-      buttons: true,
-      dangerMode: true
-    }).then(borrar => {
-      if (borrar) {
-        this._medicosService.borrarMedico(medico._id).subscribe(() => {
-          this.cargarMedicos();
-        });
-      }
-    });
+    // swal({
+    //   title: "¿Estas seguro?",
+    //   text: "Estas a punto de borrar a " + medico.nombre,
+    //   icon: "warning",
+    //   buttons: true,
+    //   dangerMode: true
+    // }).then(borrar => {
+    //   if (borrar) {
+    //     this._medicosService.borrarMedico(medico._id).subscribe(() => {
+    //       this.cargarMedicos();
+    //     });
+    //   }
+    // });
   }
 
   cambiarDesde(valor: number) {

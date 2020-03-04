@@ -5,10 +5,10 @@ import { UsuarioService } from '../services/service.index';
 import { Usuario } from '../models/usuario.model';
 import { Router } from '@angular/router';
 
-//Remedio para error de SweetAlert
-import * as _swal from 'sweetalert';
-import { SweetAlert } from 'sweetalert/typings/core';
-const swal: SweetAlert = _swal as any;
+// //Remedio para error de SweetAlert
+// import * as _swal from 'sweetalert';
+// import { SweetAlert } from 'sweetalert/typings/core';
+// // const swal: SweetAlert = _swal as any;
 
 
 declare function init_plugins();
@@ -69,7 +69,7 @@ export class RegisterComponent implements OnInit {
     }
 
     if(!this.forma.value.condiciones){
-      swal('Importante', 'Debe de aceptar las condiciones', 'warning');
+      // swal('Importante', 'Debe de aceptar las condiciones', 'warning');
       return;
     }
 

@@ -3,7 +3,7 @@ import { HospitalService } from "../../services/service.index";
 import { Hospital } from "../../models/hospital.model";
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 
-declare var swal: any;
+// declare var swal: any;
 
 @Component({
   selector: "app-hospitales",
@@ -75,17 +75,17 @@ export class HospitalesComponent implements OnInit {
   }
 
   crearHospital() {
-    swal("Escribe el nombre del hospital", {
-      content: "input",
-      buttons: true
-    }).then( (value) => {
-      if(value){
-        this._hospitalService.crearHospital(value)
-        .subscribe((resp: any) => {
-          this.cargarHospitales();
-        });
-      }
-    });
+    // swal("Escribe el nombre del hospital", {
+    //   content: "input",
+    //   buttons: true
+    // }).then( (value) => {
+    //   if(value){
+    //     this._hospitalService.crearHospital(value)
+    //     .subscribe((resp: any) => {
+    //       this.cargarHospitales();
+    //     });
+    //   }
+    // });
   }
 
   // obtenerHospital(id: string) {
@@ -96,27 +96,27 @@ export class HospitalesComponent implements OnInit {
 
   guardarHospital( hospital: Hospital ){
     if( hospital.nombre.trim().length <= 0 ){
-      swal( 'No debe estar vacio','No puede estar vacio el nombre del hospital', 'error');
+      // swal( 'No debe estar vacio','No puede estar vacio el nombre del hospital', 'error');
     }
     this._hospitalService.actualizarHospital( hospital )
     .subscribe(); 
   }
 
   borrarHospital( hospital: Hospital){
-    swal({
-      title: '¿Estas seguro?',
-      text: 'Estas a punto de borrar a ' + hospital.nombre,
-      icon: 'warning',
-      buttons: true,
-      dangerMode: true
-    })
-    .then( borrar =>{
-      if( borrar ) {
-        this._hospitalService.borrarHospital( hospital._id )
-        .subscribe( borrado => {
-          this.cargarHospitales();
-        });
-      }
-    });
+    // swal({
+    //   title: '¿Estas seguro?',
+    //   text: 'Estas a punto de borrar a ' + hospital.nombre,
+    //   icon: 'warning',
+    //   buttons: true,
+    //   dangerMode: true
+    // })
+    // .then( borrar =>{
+    //   if( borrar ) {
+    //     this._hospitalService.borrarHospital( hospital._id )
+    //     .subscribe( borrado => {
+    //       this.cargarHospitales();
+    //     });
+    //   }
+    // });
   }
 }

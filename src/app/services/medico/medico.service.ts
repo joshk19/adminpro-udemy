@@ -55,7 +55,7 @@ public _usuarioService: UsuarioService
     return this.http.delete( url )
     .pipe(
       map( resp => {
-        swal('Medico borrado', 'El medico ha sido eliminado correctamente', 'success');
+        // swal('Medico borrado', 'El medico ha sido eliminado correctamente', 'success');
         return true;
       })
     )
@@ -72,7 +72,7 @@ public _usuarioService: UsuarioService
       return this.http.put( url, medico )
       .pipe(
         map( (resp: any ) => {
-          swal('Medico actualizado', medico.nombre, 'success');
+          // swal('Medico actualizado', medico.nombre, 'success');
           return resp.medico
 
         })
@@ -84,7 +84,7 @@ public _usuarioService: UsuarioService
       return this.http.post( url, medico )
       .pipe(
         map( (resp: any) => {
-          swal('Medico creado', medico.nombre, 'success');
+          // swal('Medico creado', medico.nombre, 'success');
           return resp.medico;
         } )
       )

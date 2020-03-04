@@ -1,8 +1,10 @@
+
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
 import { UsuarioService } from "../services/usuario/usuario.service";
 import { Usuario } from "../models/usuario.model";
+import { environment } from '../../environments/environment';
 
 declare function init_plugins();
 declare const gapi: any;
@@ -13,6 +15,7 @@ declare const gapi: any;
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+  ambiente: string;
   email: string;
   recuerdame: boolean = false;
 
@@ -21,6 +24,7 @@ export class LoginComponent implements OnInit {
   constructor(public router: Router, public _usuarioService: UsuarioService) {}
 
   ngOnInit() {
+    this.ambiente = environment.mesagge;
     init_plugins();
     this.googleInit();
     this.email = localStorage.getItem("email") || "";

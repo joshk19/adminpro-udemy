@@ -6,6 +6,7 @@ import { UsuarioService } from "../services/usuario/usuario.service";
 import { Usuario } from "../models/usuario.model";
 import { environment } from '../../environments/environment';
 
+
 declare function init_plugins();
 declare const gapi: any;
 
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
   constructor(public router: Router, public _usuarioService: UsuarioService) {}
 
   ngOnInit() {
-    this.ambiente = environment.mesagge;
+    // this.ambiente = environment.message;
+    this.ambiente = environment.config.message;
     init_plugins();
     this.googleInit();
     this.email = localStorage.getItem("email") || "";

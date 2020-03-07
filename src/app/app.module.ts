@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 // Rutas
 import { APP_ROUTES } from './app.routes';
@@ -20,7 +20,11 @@ import { ServiceModule } from './services/service.module';
 //Temporal
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { AppInitService } from './app-init.service';
 
+export function init_app( _appInitService: AppInitService ){
+  return () => _appInitService.init();
+}
 
 @NgModule({
   declarations: [
@@ -39,7 +43,15 @@ import { SharedModule } from './shared/shared.module';
     ServiceModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    AppInitService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: init_app,
+      deps: [AppInitService],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,7 +23,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppInitService } from './app-init.service';
 
 export function init_app( _appInitService: AppInitService ){
-  return () => _appInitService.getSpecificConfig();
+  return () => _appInitService.getEnvRoute();
 }
 
 @NgModule({

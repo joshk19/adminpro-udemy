@@ -1,4 +1,4 @@
 {
     "environment": "local",
-    "path": "assets/environments/local"
+    "path": "assets/environments/test"
 }

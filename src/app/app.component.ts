@@ -19,23 +19,12 @@ export class AppComponent implements OnInit{
 
     ngOnInit(){
       // this.init_app();
+      this.getSpecificConfig();
     }
     
-    init_app(){
-      this.getConfigs();
-    }
-    
-    public getConfigs() {
-      // return this._appInit.getJsonPath()
-      // .subscribe( (path: any) => {
-      //   this.envirPath = path
-      //   this.getSpecificConfig();
-      // });
-    }
-
     public getSpecificConfig(){
       
-      // return this._appInit.getSpecificConfig(this.envirPath)
+      // return this._appInit.getSpecificConfig()
       // .subscribe( (config: any) => {
       //   window.config = config;
       //   console.log( 'App componenet', config )

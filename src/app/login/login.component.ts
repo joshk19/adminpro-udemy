@@ -25,11 +25,6 @@ export class LoginComponent implements OnInit {
   constructor(public router: Router, public _usuarioService: UsuarioService) {}
 
   ngOnInit() {
-    console.log(  'config Environment', environment.configMessage);
-    setTimeout(() => {
-      console.log(  'config Environment', environment.configMessage);
-    }, 5000);
-    
     this.ambiente = environment.configMessage;
     init_plugins();
     this.googleInit();

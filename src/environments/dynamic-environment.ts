@@ -7,6 +7,6 @@ export class DynamicEnvironment {
     }
 
     public get configMessage() {
-        return window.config;
+        return window.config.message;
     }
 }

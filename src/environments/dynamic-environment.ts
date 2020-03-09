@@ -6,7 +6,7 @@ export class DynamicEnvironment {
         return window.config.environment;
     }
 
-    public get config() {
+    public get configMessage() {
         return window.config;
     }
 }

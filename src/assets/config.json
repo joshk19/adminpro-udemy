@@ -1,4 +1,4 @@
 {
     "environment": "local",
-    "message": "Desde ambiente local"
+    "path": "assets/environments/prod"
 }

@@ -2,14 +2,14 @@ import { Injectable, OnInit } from "@angular/core";
 import { from } from "rxjs";
 import { map } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
-import configEX from "../assets/environments/env-route.json";
+// import configEX from "../assets/environments/env-route.json";
 declare var window: any;
 
 @Injectable({
   providedIn: "root"
 })
 export class AppInitService {
-  envirPath: string;
+  // envirPath: string;
   constructor(public http: HttpClient) {}
 
   public getEnvRoute() {
@@ -17,7 +17,7 @@ export class AppInitService {
       .get("assets/environments/env-route.json")
       .pipe(
         map((envRoute: any) => {
-          window.envRoute = envRoute;
+          // window.envRoute = envRoute;
 
           return this.http
             .get(envRoute.path + "/config.json")

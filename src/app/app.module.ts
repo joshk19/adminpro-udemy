@@ -22,9 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { AppInitService } from './app-init.service';
 
-export function init_app( _appInitService: AppInitService ){
-  return () => _appInitService.getEnvRoute();
-}
+// export function init_app( _appInitService: AppInitService ){
+//   return () => _appInitService.getEnvRoute();
+// }
 
 @NgModule({
   declarations: [
@@ -44,13 +44,13 @@ export function init_app( _appInitService: AppInitService ){
     SharedModule
   ],
   providers: [
-    AppInitService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: init_app,
-      deps: [AppInitService],
-      multi: true
-    }
+    // AppInitService,
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: init_app,
+    //   deps: [AppInitService],
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })

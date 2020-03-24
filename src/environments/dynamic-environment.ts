@@ -1,12 +1,12 @@
-import { environment } from './environment';
-declare var window: any;
+// import { environment } from './environment';
+// declare var window: any;
 
-export class DynamicEnvironment {
-    public get environment() {
-        return window.config.environment;
-    }
+// export class DynamicEnvironment {
+//     public get environment() {
+//         return window.config.environment;
+//     }
 
-    public get configMessage() {
-        return window.config.message;
-    }
-}
+//     public get configMessage() {
+//         return window.config.message;
+//     }
+// }

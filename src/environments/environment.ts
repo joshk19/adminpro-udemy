@@ -3,23 +3,23 @@
 // The list of file replacements can be found in `angular.json`.
 
 
-import { DynamicEnvironment } from './dynamic-environment';
+// import { DynamicEnvironment } from './dynamic-environment';
 
-class Environment extends DynamicEnvironment{
-    public production: boolean;
+// class Environment extends DynamicEnvironment{
+//     public production: boolean;
 
-    constructor(){
-        super();
-        this.production = false;
-    }
-}
+//     constructor(){
+//         super();
+//         this.production = false;
+//     }
+// }
 
-export const environment = new Environment();
+// export const environment = new Environment();
 
-// export const environment = {
-//   production: false,
-//   mesagge: 'Estamos en Local!!'
-// };
+export const environment = {
+  production: false,
+  mesagge: 'Estamos en Local!!'
+};
 
 /*
  * For easier debugging in development mode, you can import the following file

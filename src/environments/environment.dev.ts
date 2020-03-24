@@ -1,17 +1,17 @@
-import { DynamicEnvironment } from './dynamic-environment';
+// import { DynamicEnvironment } from './dynamic-environment';
 
-class Environment extends DynamicEnvironment{
-    public production: boolean;
+// class Environment extends DynamicEnvironment{
+//     public production: boolean;
 
-    constructor(){
-        super();
-        this.production = true;
-    }
-}
+//     constructor(){
+//         super();
+//         this.production = true;
+//     }
+// }
 
-export const environment = new Environment();
+// export const environment = new Environment();
 
-// export const environment = {
-//     production: true,
-//     mesagge: 'Estamos en Desarrollo!!'
-//   };
+export const environment = {
+    production: true,
+    mesagge: 'Estamos en Desarrollo!!'
+  };
